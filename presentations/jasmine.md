@@ -15,9 +15,14 @@
 # Example
 
 	!javascript
-	describe("Jasmine", function(){
-		it("makes testing awesome!", function(){
-			expect(true).toBeTruthy();
+	describe("sample test", function(){
+		it("tests addition", function(){
+			expect(2 + 2).toEqual(4);
 		});
 	});
+
+---
+
+# Setup: Static HTML
+
 
