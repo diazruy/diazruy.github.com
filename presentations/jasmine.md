@@ -66,7 +66,9 @@
 		- "."
 	# Array of filepaths relative to src_dir. Included before jasmine specs
 	src_files:
+		- "public/javascripts/jquery.js"
 		- "public/javascripts/**/*.js"
+		# Might want to include files manually to prevent dependency issues
 	spec_dir:
 		- "spec/javascripts"
 	# Array of filepaths relative to spec_dir
@@ -145,6 +147,19 @@ Invert criteria with `'.not'`
 
 	!javascript
 	expect(x).not.toEqual(y)
+
+---
+
+# jasmine-jquery
+
+* Place it in spec/javascript/support
+* Adds jQuery matchers
+	* `toBeChecked`, `toBeEmpty`, `toBeHidden`, `toBeSelected`, `toContain`, `toHaveAttribute`, `toHaveHtml`, `toHaveId`, `toBeDisabled`, `toHandle`, and more
+* Adds Fixture support
+	* `loadFixtures(htmlURL)`
+* Adds event spies
+	* `spyOnEvent`
+	* `toHaveBeenTriggeredOn`
 
 ---
 
@@ -236,7 +251,8 @@ Call `this.addMatchers()` from within `before` or `it` block
 * API - [http://pivotal.github.com/jasmine/jsdoc/index.html](http://pivotal.github.com/jasmine/jsdoc/index.html)
 * Jasmine Wiki - [https://github.com/pivotal/jasmine/wiki](https://github.com/pivotal/jasmine/wiki)
 * Try Jasmine on your Browser - [http://tryjasmine.com/](http://tryjasmine.com/)
-* jQuery matchers - [https://github.com/velesin/jasmine-jquery](https://github.com/velesin/jasmine-jquery)
+* jasmine-jquery - [https://github.com/velesin/jasmine-jquery](https://github.com/velesin/jasmine-jquery)
+* Jasmine Headless Webkit - [http://johnbintz.github.com/jasmine-headless-webkit/](http://johnbintz.github.com/jasmine-headless-webkit/)
 * Sinon.js - [http://sinonjs.org/](http://sinonjs.org/)
 * Railscasts - [http://railscasts.com/episodes/261-testing-javascript-with-jasmine](http://railscasts.com/episodes/261-testing-javascript-with-jasmine)
 * HTML5 slides markdown - [ https://github.com/adamzap/landslide ](https://github.com/adamzap/landslide)
